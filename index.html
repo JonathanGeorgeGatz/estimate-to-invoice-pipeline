@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Estimate-to-Invoice Pipeline — free Google Sheets tool</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.55;color:#222}
+  h1{font-size:1.7em;margin-bottom:.2em}
+  h2{font-size:1.15em;margin-top:1.6em}
+  a.dl{display:inline-block;background:#8A5A2B;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:600;margin:.6em 0}
+  code{background:#f4f1ec;padding:1px 5px;border-radius:4px;font-size:.92em}
+  ul{padding-left:1.2em}
+  li{margin:.35em 0}
+  .note{color:#666;font-size:.9em;margin-top:2.2em}
+</style>
+</head>
+<body>
+<h1>The Estimate-to-Invoice Pipeline</h1>
+<p>A free Google Sheets + Apps Script tool that carries an accepted estimate into a job and into an invoice with no retyping. Approved change orders reach the bill, a pending change order blocks invoicing loudly, and the status board leads with the money question nothing free answers: which jobs are finished but were never billed, for how much, for how long. A to-the-cent reconciliation prints <strong>DO NOT TRUST THIS BOARD</strong> if the numbers stop tying out.</p>
+<p><a class="dl" href="Estimate_to_Invoice_Pipeline_BUNDLE.zip">Download the bundle (31&nbsp;KB zip)</a></p>
+<h2>What's in it</h2>
+<ul>
+<li><code>pipeline.gs</code> — the full Apps Script engine (also published beside this page as <a href="pipeline.gs">pipeline.gs</a>)</li>
+<li>Setup instructions and the sheet layout</li>
+<li>8 CSVs of fictional sample data (Saddle Ridge Exteriors — all names and emails made up, @example.com)</li>
+<li>The three exact prompts typed on camera in the episode</li>
+</ul>
+<h2>What it found on the sample business</h2>
+<ul>
+<li>6 finished jobs that were never invoiced — <strong>$33,845.44</strong>, the oldest done 136 days ago</li>
+<li>An earlier build that matched invoices by customer name saw only 5 of the 6, and called the oldest 62 days</li>
+<li>8 of 17 invoices underbilled by a combined <strong>$3,244.31</strong> — deposits taken off before tax, and approved change orders that never reached the bill</li>
+</ul>
+<h2>How it was tested</h2>
+<p>The shipped engine was checked against an independent Python implementation on 240 generated businesses — 166,836 fields compared, zero disagreements — plus 37 functional tests and a settings sweep where every setting is proven to change the output on the shipping sample data. The episode shows the wrong turns too; they're part of the point.</p>
+<p class="note">From the YouTube series <strong>Build It With AI</strong> — Episode 9, "Finished, Never Billed." Built with AI on camera; every number above is engine output, not copy.</p>
+</body>
+</html>
